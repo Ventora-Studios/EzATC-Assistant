@@ -1,0 +1,21 @@
+﻿<Window x:Class="EzATC_Assistant.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EzATC_Assistant"
+        mc:Ignorable="d"
+        Title="EzATC Assistant Login" Height="350" Width="525" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="163" VerticalAlignment="Top" Width="519" Source="img/title/bgtemplate.png"/>
+        <Label Content="IVAO ID:" HorizontalAlignment="Left" Margin="64,179,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Airport ICAO:" HorizontalAlignment="Left" Margin="48,210,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="179,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="289" FontSize="16" MaxLength="6"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="179,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="289" FontSize="16" MaxLength="4"/>
+        <Button Content="Start session" HorizontalAlignment="Left" Margin="334,255,0,0" VerticalAlignment="Top" Width="134" Height="40" Click="Button_Click_1"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="179,255,0,0" VerticalAlignment="Top" Width="134" Height="40" Click="Button_Click"/>
+        <Label Content="EzATC Assistant" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="48" Height="66" Width="369" FontWeight="Bold" Foreground="White"/>
+        <Label Content="Login" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" FontSize="22" Height="39" Width="369" FontWeight="Bold" Foreground="White"/>
+
+    </Grid>
+</Window>
