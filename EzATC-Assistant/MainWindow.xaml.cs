@@ -27,12 +27,18 @@ namespace EzATC_Assistant
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            //Bisher wird hier nur das zweite Fenster geöffnet. Später wird hier die Verbindung
+            //zu den IVAO-Servern gemacht und die Logik für die Session bereitgestellt
+            SessionWindow sw = new SessionWindow();
+            sw.Show();
 
+            this.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            //Endet das Programm.
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }
