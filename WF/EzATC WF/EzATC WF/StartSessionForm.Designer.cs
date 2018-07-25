@@ -52,7 +52,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.Location = new System.Drawing.Point(135, 261);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(159, 39);
@@ -63,7 +63,7 @@
             // 
             // sessionButton
             // 
-            this.sessionButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sessionButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sessionButton.Location = new System.Drawing.Point(300, 261);
             this.sessionButton.Name = "sessionButton";
             this.sessionButton.Size = new System.Drawing.Size(159, 39);
@@ -78,7 +78,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label1.Location = new System.Drawing.Point(7, 184);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 19);
+            this.label1.Size = new System.Drawing.Size(72, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "IVAO VID:";
             // 
@@ -116,7 +116,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(13, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(254, 45);
+            this.label3.Size = new System.Drawing.Size(257, 45);
             this.label3.TabIndex = 4;
             this.label3.Text = "EzATC Assistant";
             // 

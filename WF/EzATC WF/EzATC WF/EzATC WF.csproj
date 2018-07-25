@@ -59,7 +59,9 @@
     </Compile>
     <Compile Include="src\Flight.cs" />
     <Compile Include="src\FlightType.cs" />
+    <Compile Include="src\Session.cs" />
     <Compile Include="src\Utilities.cs" />
+    <Compile Include="src\WeatherManager.cs" />
     <Compile Include="StartSessionForm.cs">
       <SubType>Form</SubType>
     </Compile>

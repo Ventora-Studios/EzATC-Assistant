@@ -28,42 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dEVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addFlightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listView1 = new System.Windows.Forms.ListView();
             this.depCSHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dEVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addFlightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.flightStripRulesLabel = new System.Windows.Forms.Label();
+            this.flightStripSquawkLabel = new System.Windows.Forms.Label();
+            this.flightStripTypeLabel = new System.Windows.Forms.Label();
+            this.flightStripCallsignLabel = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tafButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.sessionStatusLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.commCenterButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.reloadButton = new System.Windows.Forms.Button();
+            this.flightStripRouteLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,6 +92,13 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
@@ -108,12 +119,20 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
-            // exitToolStripMenuItem
+            // dEVToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.dEVToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addFlightToolStripMenuItem});
+            this.dEVToolStripMenuItem.Name = "dEVToolStripMenuItem";
+            this.dEVToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.dEVToolStripMenuItem.Text = "DEV";
+            // 
+            // addFlightToolStripMenuItem
+            // 
+            this.addFlightToolStripMenuItem.Name = "addFlightToolStripMenuItem";
+            this.addFlightToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.addFlightToolStripMenuItem.Text = "Add flight";
+            this.addFlightToolStripMenuItem.Click += new System.EventHandler(this.addFlightToolStripMenuItem_Click);
             // 
             // listView1
             // 
@@ -124,7 +143,7 @@
             this.columnHeader7,
             this.columnHeader8});
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem9});
+            listViewItem3});
             this.listView1.Location = new System.Drawing.Point(0, 151);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(623, 481);
@@ -135,17 +154,27 @@
             // depCSHeader
             // 
             this.depCSHeader.Text = "Callsign";
-            this.depCSHeader.Width = 144;
+            this.depCSHeader.Width = 116;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Destination";
-            this.columnHeader2.Width = 148;
+            this.columnHeader2.Width = 94;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "First Fix";
             this.columnHeader3.Width = 164;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "SID";
+            this.columnHeader7.Width = 116;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Initial Climb";
+            this.columnHeader8.Width = 115;
             // 
             // listView2
             // 
@@ -154,7 +183,7 @@
             this.columnHeader5,
             this.columnHeader6});
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem10});
+            listViewItem4});
             this.listView2.Location = new System.Drawing.Point(629, 151);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(623, 481);
@@ -177,28 +206,75 @@
             this.columnHeader6.Text = "Last Fix";
             this.columnHeader6.Width = 164;
             // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "SID";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Initial Climb";
-            this.columnHeader8.Width = 101;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Location = new System.Drawing.Point(12, 638);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1230, 191);
+            this.groupBox1.Size = new System.Drawing.Size(1083, 191);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.flightStripRouteLabel);
+            this.panel1.Controls.Add(this.flightStripRulesLabel);
+            this.panel1.Controls.Add(this.flightStripSquawkLabel);
+            this.panel1.Controls.Add(this.flightStripTypeLabel);
+            this.panel1.Controls.Add(this.flightStripCallsignLabel);
+            this.panel1.Location = new System.Drawing.Point(6, 28);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(639, 99);
+            this.panel1.TabIndex = 1;
+            // 
+            // flightStripRulesLabel
+            // 
+            this.flightStripRulesLabel.AutoSize = true;
+            this.flightStripRulesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flightStripRulesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.flightStripRulesLabel.Location = new System.Drawing.Point(4, 66);
+            this.flightStripRulesLabel.Name = "flightStripRulesLabel";
+            this.flightStripRulesLabel.Size = new System.Drawing.Size(25, 17);
+            this.flightStripRulesLabel.TabIndex = 0;
+            this.flightStripRulesLabel.Text = "IFR";
+            // 
+            // flightStripSquawkLabel
+            // 
+            this.flightStripSquawkLabel.AutoSize = true;
+            this.flightStripSquawkLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flightStripSquawkLabel.Location = new System.Drawing.Point(100, 12);
+            this.flightStripSquawkLabel.Name = "flightStripSquawkLabel";
+            this.flightStripSquawkLabel.Size = new System.Drawing.Size(36, 17);
+            this.flightStripSquawkLabel.TabIndex = 0;
+            this.flightStripSquawkLabel.Text = "4123";
+            // 
+            // flightStripTypeLabel
+            // 
+            this.flightStripTypeLabel.AutoSize = true;
+            this.flightStripTypeLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flightStripTypeLabel.Location = new System.Drawing.Point(4, 39);
+            this.flightStripTypeLabel.Name = "flightStripTypeLabel";
+            this.flightStripTypeLabel.Size = new System.Drawing.Size(47, 17);
+            this.flightStripTypeLabel.TabIndex = 0;
+            this.flightStripTypeLabel.Text = "B752/F";
+            // 
+            // flightStripCallsignLabel
+            // 
+            this.flightStripCallsignLabel.AutoSize = true;
+            this.flightStripCallsignLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flightStripCallsignLabel.Location = new System.Drawing.Point(3, 9);
+            this.flightStripCallsignLabel.Name = "flightStripCallsignLabel";
+            this.flightStripCallsignLabel.Size = new System.Drawing.Size(77, 21);
+            this.flightStripCallsignLabel.TabIndex = 0;
+            this.flightStripCallsignLabel.Text = "BER341G";
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.reloadButton);
+            this.groupBox2.Controls.Add(this.tafButton);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Location = new System.Drawing.Point(12, 81);
@@ -208,26 +284,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Weather";
             // 
-            // label1
+            // tafButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(854, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(326, 28);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "EzATC Assisstant - Controlling EDDK";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(6, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(958, 29);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "EDDK 221850Z 04002KT CAVOK 24/14 Q1015 NOSIG";
+            this.tafButton.Location = new System.Drawing.Point(970, 25);
+            this.tafButton.Name = "tafButton";
+            this.tafButton.Size = new System.Drawing.Size(45, 29);
+            this.tafButton.TabIndex = 2;
+            this.tafButton.Text = "TAF";
+            this.tafButton.UseVisualStyleBackColor = true;
+            this.tafButton.Click += new System.EventHandler(this.tafButton_Click);
             // 
             // label2
             // 
@@ -239,82 +304,25 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "230° at 4";
             // 
-            // button1
+            // textBox1
             // 
-            this.button1.Location = new System.Drawing.Point(970, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "TAF";
-            this.button1.UseVisualStyleBackColor = true;
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(6, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(958, 29);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "EDDK 221850Z 04002KT CAVOK 24/14 Q1015 NOSIG";
             // 
-            // label3
+            // sessionStatusLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 21);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "BER341G";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(6, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(639, 99);
-            this.panel1.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(4, 39);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "B752/F";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(4, 66);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "IFR";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(100, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 17);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "4123";
-            // 
-            // dEVToolStripMenuItem
-            // 
-            this.dEVToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addFlightToolStripMenuItem});
-            this.dEVToolStripMenuItem.Name = "dEVToolStripMenuItem";
-            this.dEVToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.dEVToolStripMenuItem.Text = "DEV";
-            // 
-            // addFlightToolStripMenuItem
-            // 
-            this.addFlightToolStripMenuItem.Name = "addFlightToolStripMenuItem";
-            this.addFlightToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addFlightToolStripMenuItem.Text = "Add flight";
-            this.addFlightToolStripMenuItem.Click += new System.EventHandler(this.addFlightToolStripMenuItem_Click);
+            this.sessionStatusLabel.AutoSize = true;
+            this.sessionStatusLabel.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.sessionStatusLabel.ForeColor = System.Drawing.Color.White;
+            this.sessionStatusLabel.Location = new System.Drawing.Point(854, 37);
+            this.sessionStatusLabel.Name = "sessionStatusLabel";
+            this.sessionStatusLabel.Size = new System.Drawing.Size(0, 28);
+            this.sessionStatusLabel.TabIndex = 4;
             // 
             // pictureBox1
             // 
@@ -325,13 +333,59 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // commCenterButton
+            // 
+            this.commCenterButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.commCenterButton.ForeColor = System.Drawing.Color.Green;
+            this.commCenterButton.Location = new System.Drawing.Point(1101, 638);
+            this.commCenterButton.Name = "commCenterButton";
+            this.commCenterButton.Size = new System.Drawing.Size(141, 94);
+            this.commCenterButton.TabIndex = 2;
+            this.commCenterButton.Text = "COMMCENTER";
+            this.commCenterButton.UseVisualStyleBackColor = true;
+            this.commCenterButton.Click += new System.EventHandler(this.commCenterButton_Click);
+            // 
+            // exitButton
+            // 
+            this.exitButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.Red;
+            this.exitButton.Location = new System.Drawing.Point(1101, 798);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(141, 31);
+            this.exitButton.TabIndex = 2;
+            this.exitButton.Text = "EXIT";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // reloadButton
+            // 
+            this.reloadButton.Location = new System.Drawing.Point(1021, 25);
+            this.reloadButton.Name = "reloadButton";
+            this.reloadButton.Size = new System.Drawing.Size(80, 29);
+            this.reloadButton.TabIndex = 3;
+            this.reloadButton.Text = "RELOAD";
+            this.reloadButton.UseVisualStyleBackColor = true;
+            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
+            // 
+            // flightStripRouteLabel
+            // 
+            this.flightStripRouteLabel.AutoSize = true;
+            this.flightStripRouteLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flightStripRouteLabel.Location = new System.Drawing.Point(156, 13);
+            this.flightStripRouteLabel.Name = "flightStripRouteLabel";
+            this.flightStripRouteLabel.Size = new System.Drawing.Size(357, 17);
+            this.flightStripRouteLabel.TabIndex = 1;
+            this.flightStripRouteLabel.Text = "MARUN Y164 ABTAL L135 BOMBI A312 KENAG T128 BADSO";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1254, 841);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.commCenterButton);
+            this.Controls.Add(this.sessionStatusLabel);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listView2);
@@ -348,10 +402,10 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -379,16 +433,26 @@
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label sessionStatusLabel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button tafButton;
+        private System.Windows.Forms.Label flightStripCallsignLabel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label flightStripTypeLabel;
+        private System.Windows.Forms.Label flightStripRulesLabel;
+        private System.Windows.Forms.Label flightStripSquawkLabel;
         private System.Windows.Forms.ToolStripMenuItem dEVToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addFlightToolStripMenuItem;
+        private Session s;
+
+        public MainWindow(Session s)
+        {
+            this.s = s;
+        }
+        private System.Windows.Forms.Button commCenterButton;
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button reloadButton;
+        private System.Windows.Forms.Label flightStripRouteLabel;
     }
 }

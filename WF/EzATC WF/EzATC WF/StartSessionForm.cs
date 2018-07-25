@@ -14,6 +14,8 @@ namespace EzATC_WF
 {
     public partial class StartSession : Form
     {
+        public Session s;
+
         public StartSession()
         {
             InitializeComponent();
@@ -29,10 +31,19 @@ namespace EzATC_WF
 
         private void sessionButton_Click(object sender, EventArgs e)
         {
+            s = new Session("EDDK", "438235");
+
             this.Hide();
             MainWindow mw = new MainWindow();
             mw.Closed += (s, args) => this.Close();
             mw.Show();
+
+            
+        }
+
+        public Session getSession()
+        {
+            return s;
         }
 
         private void StartSession_Load(object sender, EventArgs e)

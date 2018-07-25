@@ -22,12 +22,105 @@ namespace EzATC_WF.src
             this.ft = ft;
         }
 
-        public string Callsign { get => callsign; set => callsign = value; }
-        public string Departure { get => departure; set => departure = value; }
-        public string Destination { get => destination; set => destination = value; }
-        public string Route { get => route; set => route = value; }
-        public string Sqw { get => sqw; set => sqw = value; }
-        public string Actype { get => actype; set => actype = value; }
-        internal FlightType Ft { get => ft; set => ft = value; }
+        public string Actype
+        {
+            get
+            {
+                return actype;
+            }
+
+            set
+            {
+                actype = value;
+            }
+        }
+
+        public string Callsign
+        {
+            get
+            {
+                return callsign;
+            }
+
+            set
+            {
+                callsign = value;
+            }
+        }
+
+        public string Departure
+        {
+            get
+            {
+                return departure;
+            }
+
+            set
+            {
+                departure = value;
+            }
+        }
+
+        public string Destination
+        {
+            get
+            {
+                return destination;
+            }
+
+            set
+            {
+                destination = value;
+            }
+        }
+
+        public string Route
+        {
+            get
+            {
+                return route;
+            }
+
+            set
+            {
+                route = value;
+            }
+        }
+
+        public string Sqw
+        {
+            get
+            {
+                return sqw;
+            }
+
+            set
+            {
+                sqw = value;
+            }
+        }
+
+        internal FlightType Ft
+        {
+            get
+            {
+                return ft;
+            }
+
+            set
+            {
+                ft = value;
+            }
+        }
+
+        public String getFirstFix()
+        {
+            return "ABTAL";
+        }
+
+        public String getLastFix()
+        {
+            return "KOPAG";
+        }
     }
 }
